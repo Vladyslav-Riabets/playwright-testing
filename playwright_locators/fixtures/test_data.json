@@ -1,0 +1,133 @@
+{
+  "validUser": {
+    "name": "John",
+    "lastName": "Smith",
+    "email": "john.smith@test.com",
+    "password": "Test1234",
+    "rePassword": "Test1234"
+  },
+
+  "invalidUser": {
+    "name": "J",
+    "lastName": "S",
+    "email": "john.smithtest.com",
+    "password": "Test123",
+    "rePassword": "Test1234"
+  },
+
+  "nameCases": {
+    "empty": {
+      "error": "Name required"
+    },
+    "minValue": {
+      "value": "Ab"
+    },    
+    "oneChar": {
+      "value": "A",
+      "error": "Name has to be from 2 to 20 characters long"
+    },
+    "maxValue": {
+      "value": "Abcdrthflcnfmtopsldf"
+    },    
+    "tooLong": {
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "error": "Name has to be from 2 to 20 characters long"
+    },
+    "specSymbols": {
+      "value": "J0hn@",
+      "error": "Name is invalid"
+    },
+    "cyrillicSymbols": {
+      "value": "Тестувальник",
+      "error": "Name is invalid"
+    }
+  },
+
+  "lastNameCases": {
+    "empty": {
+      "error": "Last name required"
+    },
+    "minValue": {
+      "value": "Ab"
+    },     
+    "oneChar": {
+      "value": "S",
+      "error": "Last name has to be from 2 to 20 characters long"
+    },
+    "maxValue": {
+      "value": "Abcdrthflcnfmtopsldf"
+    }, 
+    "tooLong": {
+      "value": "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "error": "Last name has to be from 2 to 20 characters long"
+    },
+    "specSymbols": {
+      "value": "Sm1th!",
+      "error": "Last name is invalid"
+    },
+    "cyrillicSymbols": {
+      "value": "Тестувальник",
+      "error": "Last name is invalid"
+    }
+  },
+
+  "emailCases": {
+    "empty": {
+      "error": "Email required"
+    },
+    "noAt": {
+      "value": "testmail.com",
+      "error": "Email is incorrect"
+    },
+    "noDomain": {
+      "value": "test@",
+      "error": "Email is incorrect"
+    },
+    "spaces": {
+      "value": "test @mail.com",
+      "error": "Email is incorrect"
+    }
+  },
+
+  "passCases": {
+    "empty": {
+      "error": "Password required"
+    },
+    "minValue": {
+      "value": "Pass1235"
+    },
+    "maxValue": {
+      "value": "Password1234567"
+    },
+    "tooShort": {
+      "value": "Ab1",
+      "error": "Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter"
+    },
+    "tooLong": {
+      "value": "Abcdefghijklmn12",
+      "error": "Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter"
+    },
+    "noDigit": {
+      "value": "Abcdefgh",
+      "error": "Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter"
+    },
+    "noUppercase": {
+      "value": "abcdefg1",
+      "error": "Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter"
+    },
+    "noLowercase": {
+      "value": "ABCDEFG1",
+      "error": "Password has to be from 8 to 15 characters long and contain at least one integer, one capital, and one small letter"
+    }
+  },
+
+  "rePassCases": {
+    "empty": {
+      "error": "Re-enter password required"
+    },
+    "mismatch": {
+      "value": "Wrong123",
+      "error": "Passwords do not match"
+    }
+  }
+}
