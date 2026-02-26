@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test('TASK 1: user data substitution', async ({ page }) => {
   const mockResponse = {
-    statis: 'ok',
+    status: 'ok',
     data: {
       userId: 123456,
       photoFilename: 'default-user.png',
